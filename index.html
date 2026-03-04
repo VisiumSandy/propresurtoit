@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Propre Sur Toit — Démoussage & Nettoyage Toiture | Devis Gratuit</title>
+  <meta name="description" content="Démoussage et nettoyage de toiture professionnel. Devis gratuit, intervention soignée, toiture protégée. Appelez le 06 58 54 01 02. Offre -10% jusqu'au 30 mars." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- JSON-LD LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Propre Sur Toit",
+    "telephone": "+33658540102",
+    "email": "propresurtoit@gmail.com",
+    "description": "Artisan spécialisé en démoussage et nettoyage de toiture. Nettoyage toiture, démoussage, gouttières et nettoyage extérieur multi-services.",
+    "priceRange": "€€",
+    "serviceType": ["Démoussage toiture", "Nettoyage toiture", "Nettoyage gouttières", "Nettoyage extérieur"]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- SVG Defs (Icônes & Textures) -->
+  <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <defs>
+      <filter id="noise">
+        <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+        <feColorMatrix type="saturate" values="0"/>
+        <feBlend in="SourceGraphic" mode="multiply"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- Background silhouette toiture -->
+  <div class="bg-roof-silhouette" aria-hidden="true">
+    <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,200 L80,200 L80,160 L120,100 L200,100 L200,80 L280,20 L360,80 L360,100 L440,100 L480,160 L480,200 L560,200 L560,140 L640,60 L720,140 L720,200 L800,200 L800,120 L880,50 L920,50 L960,50 L1040,120 L1040,200 L1120,200 L1120,150 L1200,90 L1280,150 L1280,200 L1440,200 L1440,320 L0,320 Z" fill="currentColor" opacity="0.035"/>
+      <!-- Tuiles pattern on roof -->
+      <line x1="120" y1="100" x2="120" y2="200" stroke="currentColor" stroke-width="0.5" opacity="0.05"/>
+      <line x1="160" y1="80" x2="120" y2="100" stroke="currentColor" stroke-width="0.5" opacity="0.05"/>
+      <line x1="200" y1="80" x2="200" y2="100" stroke="currentColor" stroke-width="0.5" opacity="0.05"/>
+    </svg>
+  </div>
+
+  <!-- Noise texture overlay -->
+  <div class="bg-noise" aria-hidden="true"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navigation principale">
+    <div class="nav-inner container">
+      <a href="#hero" class="logo" aria-label="Propre Sur Toit - Accueil">
+        <span class="logo-icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 18 L16 6 L28 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 18 L8 27 L24 27 L24 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 22 L8 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+            <path d="M24 22 L26 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+            <circle cx="16" cy="14" r="2" fill="currentColor" opacity="0.4"/>
+          </svg>
+        </span>
+        <span class="logo-text">PROPRE SUR TOIT</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#offre" class="nav-offer">Offre <span class="badge-nav">-10%</span></a></li>
+        <li><a href="#devis">Devis</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a href="tel:+33658540102" class="btn-primary btn-call-nav" aria-label="Appeler Propre Sur Toit">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.9-1.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+        Appeler
+      </a>
+
+      <button class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-overlay" aria-hidden="true"></div>
+
+    <!-- Badge offre flottant -->
+    <div class="hero-badge-offer fade-in" aria-label="Offre promotionnelle">
+      <span class="stamp">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        -10% sur tous les devis jusqu'au 30 mars
+      </span>
+    </div>
+
+    <div class="hero-content container fade-in">
+      <div class="hero-text">
+        <div class="hero-eyebrow">
+          <span class="eyebrow-dot"></span>
+          Artisan démoussage & nettoyage toiture
+        </div>
+        <h1 class="hero-title">
+          Nettoyage & démoussage<br/>
+          de toiture —<br/>
+          <em>propre, durable,<br/>protégé.</em>
+        </h1>
+        <p class="hero-subtitle">Un devis rapide par téléphone ou en 1 minute.<br/>Intervention soignée, résultat durable.</p>
+
+        <div class="hero-ctas">
+          <a href="tel:+33658540102" class="btn-primary btn-hero-call">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.9-1.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+            Appeler maintenant
+          </a>
+          <a href="#devis" class="btn-secondary btn-hero-devis">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            Demander un devis
+          </a>
+        </div>
+
+        <div class="hero-badges">
+          <span class="badge-pill">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            Démoussage
+          </span>
+          <span class="badge-pill">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 16.5c0 1.93 2.239 3.5 5 3.5s5-1.57 5-3.5-2.239-3.5-5-3.5-5 1.57-5 3.5z"/><path d="M7 16.5V7.5c0-1.93 2.239-3.5 5-3.5s5 1.57 5 3.5v9"/></svg>
+            Nettoyage toiture
+          </span>
+          <span class="badge-pill">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            Multi-services
+          </span>
+          <span class="badge-pill badge-offer-pill">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Offre -10%
+          </span>
+        </div>
+      </div>
+
+      <!-- Illustration hero côté droit -->
+      <div class="hero-illustration" aria-hidden="true">
+        <div class="hero-roof-card">
+          <svg viewBox="0 0 320 260" fill="none" xmlns="http://www.w3.org/2000/svg" class="roof-svg">
+            <!-- Maison -->
+            <path d="M40 160 L160 40 L280 160" stroke="rgba(255,255,255,0.5)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="rgba(255,255,255,0.04)"/>
+            <rect x="70" y="160" width="180" height="90" rx="2" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+            <!-- Tuiles rangée 1 -->
+            <path d="M70 175 Q79 168 88 175 Q97 168 106 175 Q115 168 124 175 Q133 168 142 175 Q151 168 160 175 Q169 168 178 175 Q187 168 196 175 Q205 168 214 175 Q223 168 232 175 Q241 168 250 175" stroke="rgba(255,255,255,0.25)" stroke-width="1.2" fill="none"/>
+            <!-- Tuiles rangée 2 -->
+            <path d="M70 192 Q79 185 88 192 Q97 185 106 192 Q115 185 124 192 Q133 185 142 192 Q151 185 160 192 Q169 185 178 192 Q187 185 196 192 Q205 185 214 192 Q223 185 232 192 Q241 185 250 192" stroke="rgba(255,255,255,0.2)" stroke-width="1.2" fill="none"/>
+            <!-- Tuiles rangée 3 -->
+            <path d="M70 209 Q79 202 88 209 Q97 202 106 209 Q115 202 124 209 Q133 202 142 209 Q151 202 160 209 Q169 202 178 209 Q187 202 196 209 Q205 202 214 209 Q223 202 232 209 Q241 202 250 209" stroke="rgba(255,255,255,0.15)" stroke-width="1.2" fill="none"/>
+            <!-- Mousse (avant nettoyage) - effet décoratif -->
+            <ellipse cx="100" cy="163" rx="14" ry="5" fill="rgba(100,160,80,0.25)" />
+            <ellipse cx="140" cy="158" rx="10" ry="4" fill="rgba(100,160,80,0.2)" />
+            <ellipse cx="200" cy="161" rx="12" ry="4" fill="rgba(100,160,80,0.2)" />
+            <!-- Brosse / outil nettoyage -->
+            <rect x="148" y="108" width="4" height="28" rx="2" fill="rgba(255,255,255,0.6)"/>
+            <rect x="140" y="130" width="20" height="8" rx="3" fill="rgba(255,255,255,0.4)"/>
+            <line x1="142" y1="134" x2="142" y2="138" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+            <line x1="146" y1="134" x2="146" y2="138" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+            <line x1="150" y1="134" x2="150" y2="138" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+            <line x1="154" y1="134" x2="154" y2="138" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+            <line x1="158" y1="134" x2="158" y2="138" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+            <!-- Étoiles / résultat propre -->
+            <circle cx="260" cy="80" r="2" fill="rgba(255,220,100,0.7)"/>
+            <circle cx="270" cy="65" r="1.5" fill="rgba(255,220,100,0.5)"/>
+            <circle cx="255" cy="60" r="1" fill="rgba(255,220,100,0.4)"/>
+            <!-- Gouttière -->
+            <rect x="62" y="158" width="196" height="5" rx="2.5" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.3)" stroke-width="0.8"/>
+            <rect x="62" y="158" width="8" height="30" rx="2" fill="rgba(255,255,255,0.15)"/>
+            <rect x="250" y="158" width="8" height="30" rx="2" fill="rgba(255,255,255,0.15)"/>
+          </svg>
+
+          <!-- Stats flottantes -->
+          <div class="float-stat float-stat-1">
+            <span class="float-stat-num">+250</span>
+            <span class="float-stat-label">Toitures traitées</span>
+          </div>
+          <div class="float-stat float-stat-2">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Toiture protégée</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services section-pad" id="services" aria-labelledby="services-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Nos prestations</span>
+        <h2 id="services-title" class="section-title">Ce que nous faisons pour votre toiture</h2>
+        <p class="section-desc">Chaque intervention est réalisée avec soin, les bons outils, et le respect de votre propriété.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card reveal" style="--delay:0.05s">
+          <div class="service-card-inner">
+            <div class="service-icon-wrap" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 30 L24 10 L40 30" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 30 L12 40 L36 40 L36 30" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <ellipse cx="18" cy="28" rx="5" ry="3" fill="currentColor" opacity="0.25"/>
+                <ellipse cx="28" cy="26" rx="4" ry="2.5" fill="currentColor" opacity="0.2"/>
+                <path d="M22 20 Q24 17 26 20 Q28 17 30 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Démoussage toiture</h3>
+            <p class="service-desc">Élimination complète de la mousse, lichens et algues qui fragilisent les tuiles et ardoises.</p>
+            <div class="service-benefit">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Évite les infiltrations d'eau
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card reveal" style="--delay:0.1s">
+          <div class="service-card-inner">
+            <div class="service-icon-wrap" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 28 L24 12 L40 28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 28 L12 38 L36 38 L36 28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M14 34 Q17 31 20 34 Q23 31 26 34 Q29 31 32 34" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.5"/>
+                <path d="M14 30 Q17 27 20 30 Q23 27 26 30 Q29 27 32 30" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.5"/>
+                <rect x="20" y="16" width="4" height="10" rx="2" fill="currentColor" opacity="0.4"/>
+                <rect x="16" y="24" width="12" height="5" rx="2.5" fill="currentColor" opacity="0.3"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Nettoyage toiture</h3>
+            <p class="service-desc">Nettoyage en profondeur des tuiles et ardoises. Retrouvez l'aspect d'origine de votre toit.</p>
+            <div class="service-benefit">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Redonne l'aspect net et soigné
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card reveal" style="--delay:0.15s">
+          <div class="service-card-inner">
+            <div class="service-icon-wrap" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 20 L40 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M8 20 Q8 26 6 32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M40 20 Q40 26 42 32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M6 32 Q8 36 12 36 L12 44" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M42 32 Q40 36 36 36 L36 44" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M10 20 L10 14 L14 10 L20 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+                <circle cx="28" cy="28" r="3" fill="currentColor" opacity="0.2"/>
+                <path d="M6 25 L8 23 M42 25 L40 23" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Nettoyage gouttières</h3>
+            <p class="service-desc">Débouchage et nettoyage complet des gouttières et évacuations d'eau pluviale.</p>
+            <div class="service-benefit">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Protège les façades et fondations
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card reveal" style="--delay:0.2s">
+          <div class="service-card-inner">
+            <div class="service-icon-wrap" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8" y="16" width="32" height="24" rx="3" stroke="currentColor" stroke-width="2" fill="none"/>
+                <path d="M14 16 L14 10 Q14 6 18 6 L30 6 Q34 6 34 10 L34 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                <path d="M10 24 L38 24" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                <path d="M10 32 L38 32" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                <path d="M20 40 L18 44 M28 40 L30 44" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+                <circle cx="24" cy="28" r="3" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.5"/>
+                <path d="M22 28 L26 28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Nettoyage multi-services</h3>
+            <p class="service-desc">Façades, terrasses, allées, parkings. Un seul artisan pour remettre en état l'ensemble de votre extérieur.</p>
+            <div class="service-benefit">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Tout remis à neuf en une intervention
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process section-pad" id="process" aria-labelledby="process-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Comment ça se passe</span>
+        <h2 id="process-title" class="section-title">Simple, soigné, efficace</h2>
+      </div>
+
+      <div class="process-steps">
+        <div class="process-step reveal" style="--delay:0s">
+          <div class="step-number" aria-hidden="true">01</div>
+          <div class="step-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M24 16 L24 26 L30 30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M16 8 L18 4 M32 8 L30 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+            </svg>
+          </div>
+          <h3 class="step-title">Diagnostic rapide</h3>
+          <p class="step-desc">On évalue l'état de votre toiture et vous propose un devis clair, sans engagement.</p>
+        </div>
+
+        <div class="process-connector" aria-hidden="true">
+          <svg width="40" height="2" viewBox="0 0 40 2"><line x1="0" y1="1" x2="40" y2="1" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.4"/></svg>
+        </div>
+
+        <div class="process-step reveal" style="--delay:0.1s">
+          <div class="step-number" aria-hidden="true">02</div>
+          <div class="step-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 48 48" fill="none">
+              <path d="M10 36 L20 26 L26 32 L34 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 10 L40 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M8 18 L28 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+              <circle cx="36" cy="36" r="8" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.3"/>
+              <path d="M33 36 L35 38 L39 34" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="step-title">Intervention soignée</h3>
+          <p class="step-desc">Travail propre, matériel adapté, respect de votre propriété. On repart en laissant tout net.</p>
+        </div>
+
+        <div class="process-connector" aria-hidden="true">
+          <svg width="40" height="2" viewBox="0 0 40 2"><line x1="0" y1="1" x2="40" y2="1" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.4"/></svg>
+        </div>
+
+        <div class="process-step reveal" style="--delay:0.2s">
+          <div class="step-number" aria-hidden="true">03</div>
+          <div class="step-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 48 48" fill="none">
+              <path d="M24 4 L8 12 L8 28 C8 36 16 42 24 44 C32 42 40 36 40 28 L40 12 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/>
+              <path d="M16 24 L21 29 L32 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="step-title">Toiture protégée</h3>
+          <p class="step-desc">Votre toit retrouve son état optimal. Une protection durable contre les éléments et l'humidité.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFRE -10% -->
+  <section class="offre section-pad" id="offre" aria-labelledby="offre-title">
+    <div class="container">
+      <div class="offre-card reveal">
+        <div class="offre-card-inner">
+          <div class="offre-badge-stamp" aria-hidden="true">
+            <svg width="64" height="64" viewBox="0 0 80 80" fill="none">
+              <circle cx="40" cy="40" r="36" stroke="currentColor" stroke-width="2" stroke-dasharray="3 4" opacity="0.6"/>
+              <circle cx="40" cy="40" r="30" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+              <text x="40" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="currentColor" font-family="Playfair Display, serif">-10</text>
+              <text x="40" y="48" text-anchor="middle" font-size="9" fill="currentColor" font-family="DM Sans, sans-serif" opacity="0.7">% OFFRE</text>
+            </svg>
+          </div>
+
+          <div class="offre-text">
+            <span class="section-label">Offre limitée</span>
+            <h2 id="offre-title" class="offre-title">-10% sur tous vos devis</h2>
+            <p class="offre-desc">Profitez de <strong>10% de réduction</strong> sur l'ensemble de nos prestations pour tout devis accepté avant le 30 mars. Ne laissez pas votre toiture attendre.</p>
+
+            <div class="countdown-block" aria-label="Compte à rebours jusqu'au 30 mars">
+              <div class="countdown-item">
+                <span class="countdown-num" id="cd-days">--</span>
+                <span class="countdown-label">Jours</span>
+              </div>
+              <div class="countdown-sep" aria-hidden="true">:</div>
+              <div class="countdown-item">
+                <span class="countdown-num" id="cd-hours">--</span>
+                <span class="countdown-label">Heures</span>
+              </div>
+              <div class="countdown-sep" aria-hidden="true">:</div>
+              <div class="countdown-item">
+                <span class="countdown-num" id="cd-mins">--</span>
+                <span class="countdown-label">Minutes</span>
+              </div>
+              <div class="countdown-sep" aria-hidden="true">:</div>
+              <div class="countdown-item">
+                <span class="countdown-num" id="cd-secs">--</span>
+                <span class="countdown-label">Secondes</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="offre-cta">
+            <a href="#devis" class="btn-primary btn-offre">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              Profiter de l'offre
+            </a>
+            <span class="offre-note">Devis gratuit, sans engagement</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEVIS -->
+  <section class="devis section-pad" id="devis" aria-labelledby="devis-title">
+    <div class="container">
+      <div class="devis-wrap">
+        <div class="devis-left reveal">
+          <span class="section-label">Votre devis</span>
+          <h2 id="devis-title" class="section-title">Obtenez votre devis<br/>en 1 minute</h2>
+          <p class="section-desc">Remplissez ce formulaire, on vous recontacte pendant les horaires ouvrés.</p>
+
+          <div class="devis-trust-list">
+            <div class="trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Devis gratuit et sans engagement
+            </div>
+            <div class="trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Artisan local sérieux
+            </div>
+            <div class="trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Offre -10% jusqu'au 30 mars
+            </div>
+          </div>
+
+          <a href="tel:+33658540102" class="devis-phone-cta" aria-label="Appeler directement le 06 58 54 01 02">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.9-1.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+            <div>
+              <span class="phone-label">Préférez appeler ?</span>
+              <span class="phone-num">06 58 54 01 02</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="devis-form-wrap reveal" style="--delay:0.1s">
+          <form class="devis-form glass-form" id="devisForm" novalidate aria-label="Formulaire de demande de devis">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nom">Nom <span aria-hidden="true">*</span></label>
+                <input type="text" id="nom" name="nom" required autocomplete="name" placeholder="Votre nom" aria-required="true"/>
+              </div>
+              <div class="form-group">
+                <label for="tel">Téléphone <span aria-hidden="true">*</span></label>
+                <input type="tel" id="tel" name="tel" required autocomplete="tel" placeholder="06 XX XX XX XX" aria-required="true"/>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email <span class="optional">(optionnel)</span></label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="votre@email.fr"/>
+              </div>
+              <div class="form-group">
+                <label for="ville">Ville <span aria-hidden="true">*</span></label>
+                <input type="text" id="ville" name="ville" required placeholder="Votre ville" aria-required="true"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="service">Service souhaité</label>
+              <select id="service" name="service">
+                <option value="">-- Choisir un service --</option>
+                <option value="demossage">Démoussage toiture</option>
+                <option value="nettoyage-toiture">Nettoyage toiture</option>
+                <option value="gouttières">Nettoyage gouttières</option>
+                <option value="multi-services">Nettoyage multi-services</option>
+                <option value="autre">Autre / je ne sais pas encore</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message <span class="optional">(optionnel)</span></label>
+              <textarea id="message" name="message" rows="3" placeholder="Type de toiture, surface approximative, questions…"></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary btn-submit">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Recevoir mon devis
+            </button>
+            <p class="form-note">On vous recontacte pendant les horaires ouvrés.</p>
+
+            <div class="form-success" id="formSuccess" role="status" aria-live="polite" hidden>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Demande envoyée ! On vous recontacte très vite.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT + FAQ -->
+  <section class="contact section-pad" id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-block reveal">
+          <span class="section-label">Nous contacter</span>
+          <h2 id="contact-title" class="section-title">On est là pour vous</h2>
+
+          <div class="contact-cards">
+            <a href="tel:+33658540102" class="contact-card" aria-label="Appeler le 06 58 54 01 02">
+              <div class="contact-card-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.9-1.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+              </div>
+              <div>
+                <span class="contact-card-label">Téléphone</span>
+                <span class="contact-card-value">06 58 54 01 02</span>
+              </div>
+            </a>
+            <a href="mailto:propresurtoit@gmail.com" class="contact-card" aria-label="Envoyer un email à propresurtoit@gmail.com">
+              <div class="contact-card-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <span class="contact-card-label">Email</span>
+                <span class="contact-card-value">propresurtoit@gmail.com</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="faq-block reveal" style="--delay:0.1s">
+          <span class="section-label">Questions fréquentes</span>
+          <h3 class="faq-title">Ce qu'on nous demande souvent</h3>
+
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary class="faq-question">
+                Combien de temps dure une intervention ?
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <p class="faq-answer">Cela dépend de la taille et de l'état de votre toiture. On vous donne une estimation précise lors du diagnostic avant toute intervention.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                Le devis est-il vraiment gratuit ?
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <p class="faq-answer">Oui, le devis est entièrement gratuit et sans engagement. On se déplace ou on évalue par téléphone selon votre situation.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">
+                Travaillez-vous sur tous types de toiture ?
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <p class="faq-answer">Tuiles, ardoises, zinc… Nous intervenons sur les principaux types de couverture. En cas de doute, appelez-nous directement.</p>
+            </details>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner container">
+      <div class="footer-brand">
+        <a href="#hero" class="logo logo-footer" aria-label="Propre Sur Toit">
+          <span class="logo-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+              <path d="M4 18 L16 6 L28 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 18 L8 27 L24 27 L24 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="logo-text">PROPRE SUR TOIT</span>
+        </a>
+        <p class="footer-tagline">Démoussage • Nettoyage toiture • Multi-services</p>
+        <div class="footer-offer-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          -10% sur tous les devis jusqu'au 30 mars
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <nav aria-label="Navigation pied de page">
+          <a href="#services">Services</a>
+          <a href="#offre">Offre -10%</a>
+          <a href="#devis">Devis</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+
+      <div class="footer-contact">
+        <a href="tel:+33658540102" class="footer-contact-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.9-1.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+          06 58 54 01 02
+        </a>
+        <a href="mailto:propresurtoit@gmail.com" class="footer-contact-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          propresurtoit@gmail.com
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 Propre Sur Toit — Artisan rénovation toiture</span>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY BAR -->
+  <div class="mobile-sticky-bar" id="mobileStickyBar" aria-label="Barre d'actions rapides">
+    <a href="tel:+33658540102" class="btn-sticky btn-sticky-call">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.9-1.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+      Appeler
+    </a>
+    <a href="#devis" class="btn-sticky btn-sticky-devis">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      Devis express
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
